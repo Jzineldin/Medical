@@ -1,0 +1,24 @@
+# System files
+nul
+NUL
+*.tmp
+*.log
+
+# IDE files
+.vscode/
+.claude/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

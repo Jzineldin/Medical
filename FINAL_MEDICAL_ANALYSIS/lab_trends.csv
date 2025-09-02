@@ -1,0 +1,11 @@
+Date,Time,Analys,Värde,Enhet,Referens,Markering,Ordered_by,Unit,Notes
+2025-08-31,13:54,P—Troponin T,4,ng/L,<15,,Sofia Kaneberg (ST-läkare),Akutmottagningen Växjö,Normalt - hjärtinfarkt utesluten
+2025-08-31,06:04,P—Troponin T,5,ng/L,<15,,Med Växjö Jour,Akutmottagningen Växjö,Normalt - tidigare prov samma episode
+2025-08-31,06:04,B—Trombocyter,266,x10^9/L,165-387,,Med Växjö Jour,Akutmottagningen Växjö,Normalt värde
+2025-08-31,06:04,B—EVF,0.41,,0.35-0.46,,Med Växjö Jour,Akutmottagningen Växjö,Normalt värde
+2025-08-31,06:04,P—Natrium,139,mmol/L,137-144,,Med Växjö Jour,Akutmottagningen Växjö,Normalt värde
+2025-08-31,06:04,P—Kalium,4.2,mmol/L,3.5-4.4,,Med Växjö Jour,Akutmottagningen Växjö,Viss hemolys - falskt förhöjt
+2025-08-31,06:04,P—Calcium,2.48,mmol/L,2.15-2.50,,Med Växjö Jour,Akutmottagningen Växjö,Normalt värde
+2025-08-31,06:04,P—Glukos,7.8,mmol/L,3.0-11.1,,Med Växjö Jour,Akutmottagningen Växjö,Normalt värde
+2025-08-31,06:04,P—CRP,<3,mg/L,<3,,Med Växjö Jour,Akutmottagningen Växjö,Ingen inflammation
+2025-08-31,06:04,B—Leukocyter,8.9,x10^9/L,3.5-8.8,*,Med Växjö Jour,Akutmottagningen Växjö,Lätt förhöjt - över referens

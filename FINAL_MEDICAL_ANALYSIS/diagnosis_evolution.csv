@@ -1,0 +1,18 @@
+Date,Time,ICD_Code,Diagnosis,Type,Prescribed_by,Unit,Notes
+2025-09-01,16:09,F412,Blandade ångest- och depressionstillstånd,Huvuddiagnos,Malin Heigis (Läkare),Vårdcentralen Hälsocentralen Falken,Combined with hypertension
+2025-09-01,16:09,I109,Essentiell hypertoni,Bidiagnos,Malin Heigis (Läkare),Vårdcentralen Hälsocentralen Falken,Secondary to anxiety/depression
+2025-08-31,14:00,I109,Essentiell hypertoni,Huvuddiagnos,Sofia Kaneberg (Läkare),Akutmottagningen Växjö,Hypertensive crisis - 253/133 mmHg
+2025-08-28,09:03,F412,Blandade ångest- och depressionstillstånd,Huvuddiagnos,Malin Heigis (Läkare),Vårdcentralen Hälsocentralen Falken,Duloxetin started this date
+2025-07-31,11:19,F44,Dissociativa kramper,Huvuddiagnos,Mattias Afram (Läkare),Neurologi- och strokemottagningen Växjö,Neurological evaluation - no epilepsy
+2025-07-02,16:38,F412,Blandade ångest- och depressionstillstånd,Huvuddiagnos,Malin Heigis (Läkare),Vårdcentralen Hälsocentralen Falken,With dizziness and suspected epilepsy
+2025-07-01,08:31,F412,Blandade ångest- och depressionstillstånd,Huvuddiagnos,Dan Dietrichson (Beteendevetare),Vårdcentralen Hälsocentralen Falken,With dizziness and hypertension
+2025-06-12,11:03,F412,Blandade ångest- och depressionstillstånd,Huvuddiagnos,Malin Heigis (Läkare),Vårdcentralen Hälsocentralen Falken,With dizziness and hypertension
+2025-05-27,10:38,F412,Blandade ångest- och depressionstillstånd,Huvuddiagnos,Dan Dietrichson (Beteendevetare),Vårdcentralen Hälsocentralen Falken,With dizziness
+2025-05-21,16:17,R55,Svimning och kollaps,Huvuddiagnos,Mattias Afram (Läkare),Neurologi- och strokemottagningen Växjö,Syncope episodes
+2024-12-02,08:49,H81,Yrsel och svindel,Huvuddiagnos,Malin Heigis (Läkare),Vårdcentralen Hälsocentralen Falken,With syncope and anxiety
+2024-08-16,16:09,I151,Renovaskulär hypertoni,Huvuddiagnos,Malin Heigis (Läkare),Vårdcentralen Hälsocentralen Falken,Renal hypertension with sleep/anxiety disorders
+2020-06-17,14:59,F410,Paniksyndrom,Huvuddiagnos,Stanislaw Steczko (Läkare),Vårdcentralen Åseda,With sleep disorder and hypertension
+2019-12-19,10:21,F410,Paniksyndrom [episodisk paroxysmal ångest],Huvuddiagnos,Måns Faxén (Läkare),Vårdcentralen Åseda,With sleep disorder and hypertension
+2019-02-05,10:59,F32,Depressiv episod,Huvuddiagnos,Hans Bodlund (Läkare),Vårdcentralen Åseda,With PTSD and sleep disorder
+2017-02-02,14:50,F33,Recidiverande depression,Huvuddiagnos,Anna Gaska-Dabrowska (Läkare),Vårdcentralen Åseda,With stress reaction and syncope
+2015-01-08,23:40,I20,Angina pectoris,Huvuddiagnos,Abdiaziz Nor (Läkare),Akutmottagningen Växjö,Chest pain - cardiac evaluation

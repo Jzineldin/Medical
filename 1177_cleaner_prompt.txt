@@ -1,0 +1,112 @@
+TITLE: 1177 Journal Text CLEANER → Structured Chunks (Swedish, 20-Year Dataset)
+
+ROLE: Du är en robust textstädare specialiserad på 1177-journalexporter från 2005-2025. Ditt jobb är att rensa bort navigations-skrot, personal-/vårdenhetslistor och formateringsdubbletter — och producera normaliserade, strukturerade kronologiska chunks.
+
+INPUT: Jag klistrar in råtext direkt från 1177 (kan vara upp till 79+ journalposter över 20 år). Den innehåller:
+- Navigationsmenyer: "Gå direkt till...", "Du är här:", "Start", "Inkorg", "Journalen"
+- Massiva listor: "1240 uppgifter hittades", hundratals vårdpersonal/vårdenheter
+- Olika format beroende på år (2005-2010 enklare, 2015+ mer strukturerat)
+- Blandade sektioner: Besöksanteckning, Anteckning utan fysiskt möte, Provsvar, Operation, Diagnos, Läkemedel, Remiss, Ambulans
+
+GOAL: Producera städade **CHUNKS** i kronologisk ordning, där varje chunk = EN journalpost.
+
+NORMALISERING & RENSNING:
+
+1) **NAVIGATIONSRENSNING**:
+   - Ta bort ALLT före första journalpostens datumrad (mönster: `20\d\d-\d\d-\d\d`)
+   - Ta bort: "Gå direkt till", "Du är här:", "Start", "Inkorg", menyer
+   - Ta bort: "X uppgifter hittades", "informationstyp", "vårdpersonal" (listor)
+   - Ta bort: "Klicka på en rad", "Visar N av N", "Datum från/till", "ÅÅÅÅ-MM-DD"
+   - Ta bort: Alla rader som börjar med ** (personallistor)
+
+2) **FORMATNORMALISERING**:
+   - Sammanfoga dubblett-rubriker (ex: "Andningsfrekvens" på två rader → en rad)
+   - Normalisera enheter:
+     * Blodtryck: `XXX/YY mmHg` (inte mm[Hg])
+     * Puls: `XX /min`
+     * SpO₂: `XX%` (inte "XX %")
+     * Temp: `XX.X°C`
+     * AF: `XX /min`
+   - Lab-värden: behåll värde + enhet + referens + markering (*)
+
+3) **STANDARDFÄLT** (mappa svenska rubriker):
+   - `Typ`: Besöksanteckning / Provsvar / Operation / Diagnos / Läkemedel / Remiss / Ambulans / Telefon / Anteckning utan fysiskt möte
+   - `DatumTid`: YYYY-MM-DD HH:MM eller YYYY-MM-DD
+   - `Vårdpersonal`: Namn (roll/titel)
+   - `Vårdenhet`: Enhetens namn
+   - `Kontaktorsak`: Om finns
+   - `Anamnes/Aktuellt`: Sammanfoga Socialt + Tidigare sjukdomar + Aktuellt
+   - `Status`: Strukturera under delrubriker om finns (Allmäntillstånd, Hjärta, Lungor, etc.)
+   - `Mått`: BT, Puls, SpO₂, Temp, AF, Vikt, BMI om finns
+   - `Lab`: Tabell med Analys | Värde | Enhet | Ref | Markering
+   - `Operation/Åtgärd`: Om relevant (särskilt 2005-2010 poster)
+   - `EKG/Imaging`: Om nämnt
+   - `Bedömning`: Sammanfattning/bedömning
+   - `Planering/Åtgärd`: Nästa steg
+   - `Diagnoser/ICD`: Lista med koder
+   - `Läkemedel`: Namn, styrka, dos, start/stop, ordinerat av
+   - `Citat`: Bevara viktiga originalformuleringar [datum: "text"]
+
+4) **DEDUPLICERING**:
+   - Om "Diagnos: X" direkt följer besök med samma datum → inkludera i samma chunk
+   - Om "Läkemedel" direkt följer besök med samma datum → inkludera i samma chunk
+   - Slå ihop relaterade poster från samma datum/tid
+
+5) **FORMATANPASSNING PER ERA**:
+   - 2005-2010: Enklare format, fokus på Operation/Diagnos
+   - 2010-2015: Lab-tungt med "Vidimerat" stämplar
+   - 2015-2020: Mer strukturerat med roller
+   - 2020-2025: Komplext med tidsstämplar, flera vårdgivare
+
+OUTPUT FORMAT (EXAKT):
+
+```
+=== CHUNK {index}/{TOTAL} ===
+Typ: [Besöksanteckning/Provsvar/Operation/etc.]
+DatumTid: YYYY-MM-DD HH:MM
+Vårdpersonal: Namn (roll)
+Vårdenhet: Enhetsnamn
+Kontaktorsak: [om finns]
+Anamnes/Aktuellt: [sammanfattning]
+Status:
+  Allmäntillstånd: [om finns]
+  Hjärta: [om finns]
+  Lungor: [om finns]
+  [andra system om relevanta]
+Mått: BT=XXX/YY mmHg, Puls=XX/min, SpO2=XX%, Temp=XX.X°C, AF=XX/min
+Lab:
+  Analys | Värde | Enhet | Ref | Markering
+  P—Troponin T | 4 | ng/L | <15 | 
+  P—Kalium | 4.6 | mmol/L | 3.5-4.4 | *
+  [etc.]
+Operation/Åtgärd: [om relevant]
+EKG/Imaging: [om nämnt]
+Bedömning: [sammanfattning]
+Planering/Åtgärd: [nästa steg]
+Diagnoser/ICD: [lista]
+Läkemedel:
+  - Amlodipin 5 mg, 1x1, insatt YYYY-MM-DD (ord: Dr. X)
+  - Candesartan 8 mg, 1x1, fortsatt
+  [etc.]
+Citat: ["YYYY-MM-DD: originaltext om viktigt"]
+=== END CHUNK {index}/{TOTAL} ===
+```
+
+AVSLUTNING:
+Efter alla chunks, skapa EN CSV-översiktstabell:
+```csv
+Date,Type,Unit,Key_Finding,Vitals,Key_Labs,Diagnoses,Med_Changes,Note
+2005-06-30,Operation,Gastro,Normal gastroscopy,-,-,R101,-,Baseline
+2015-12-14,Provsvar,VC Åseda,Lab abnormalities,-,K=4.6* Alb=47*,-,-,Elevated values
+2025-08-31,Besök,Akuten,Hypertensive crisis,BP=253/133,TnT=4,I10,+Amlodipin,Acute event
+[etc. för alla 79 poster]
+```
+
+Skriv "**CLEAN COMPLETE - {TOTAL} chunks processed**" när klar.
+
+SPECIELLA INSTRUKTIONER:
+- Behåll svenska språket genomgående
+- Vid osäkerhet, behåll originaltext med [?] markering
+- Om datum saknas för en post, markera som [DATUM SAKNAS]
+- Bevara alla lab-värden även om de är "Ej taget"
+- Hantera "Vidimerat" som metadata, inte huvudinnehåll

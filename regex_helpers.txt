@@ -1,0 +1,182 @@
+REGEX HELPERS FOR 1177 JOURNAL PRE-CLEANING (2005-2025 Formats)
+================================================================
+
+These regex patterns help pre-clean raw 1177 exports before running the main CLEANER prompt.
+Use with find/replace in any text editor that supports regex (VS Code, Notepad++, etc.)
+
+## NAVIGATION & MENU REMOVAL
+----------------------------
+
+### Remove top navigation (lines 1-28 typically)
+FIND: ^(Gå direkt till.*|Du är här:.*|Start\s*$|Inkorg.*|Bokade tider.*|Journalen\s*$|Egen provhantering.*|Stöd och behandling.*|Intyg.*|Övriga tjänster.*)$\n?
+REPLACE: [empty]
+
+### Remove "X uppgifter hittades" and filter sections
+FIND: ^\d+\s+uppgifter hittades.*$\n?
+REPLACE: [empty]
+
+### Remove "informationstyp" duplicate headers
+FIND: ^informationstyp\s*$\n(informationstyp\s*$\n)?
+REPLACE: [empty]
+
+### Remove date filter fields
+FIND: ^(Datum från|Datum till|ÅÅÅÅ-MM-DD)\s*$\n?
+REPLACE: [empty]
+
+## STAFF LIST REMOVAL (Major space saver!)
+------------------------------------------
+
+### Remove starred staff names (** prefix)
+FIND: ^\*\*[A-ZÅÄÖ].*$\n?
+REPLACE: [empty]
+
+### Remove staff with roles in parentheses
+FIND: ^[A-ZÅÄÖ][a-zåäö]+,\s+[A-ZÅÄÖ][a-zåäö]+.*\([^)]+\)\s*$\n?
+REPLACE: [empty]
+
+### Remove standalone names (careful - test first)
+FIND: ^[A-ZÅÄÖ][a-zåäö]+\s+[A-ZÅÄÖ][a-zåäö]+\s*$\n?
+REPLACE: [empty]
+
+### Remove "vårdpersonal" header and subsequent list
+FIND: ^vårdpersonal\s*$\n(vårdpersonal\s*$\n)?
+REPLACE: [empty]
+
+## SECTION HEADERS CLEANUP
+-------------------------
+
+### Remove checkbox categories
+FIND: ^(Anteckningar|Diagnoser|Läkemedel|Provsvar|Remisser|Uppmärksamhetsinformation|Vårdkontakter)\s*$\n
+REPLACE: [empty]
+
+### Clean duplicate section headers
+FIND: ^(Analys|Resultat och kommentarer|Referensintervall)\s*$\n\1\s*$\n
+REPLACE: $1\n
+
+## FORMAT-SPECIFIC CLEANERS BY ERA
+----------------------------------
+
+### 2005-2010: Simple format cleaners
+FIND: ^(Operation|Diagnos|Sederande|Svalganestesi)\s*$\n\1
+REPLACE: $1
+
+### 2010-2015: Lab-heavy format
+FIND: (Vidimerat:.*)\n(Vidimerat:.*)\n
+REPLACE: $1\n
+
+### 2015-2020: Role annotations
+FIND: \s*,\s*([A-Z]{2,}-läkare|distriktsläkare|specialistläkare)\s*,\s*[a-z]{3}\d{3}
+REPLACE: , $1
+
+### 2020-2025: Timestamp duplicates
+FIND: ^(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2})\s*$\n\1
+REPLACE: $1
+
+## WHITESPACE & FORMATTING
+-------------------------
+
+### Remove excessive blank lines (more than 2)
+FIND: \n{3,}
+REPLACE: \n\n
+
+### Remove trailing whitespace
+FIND: [ \t]+$
+REPLACE: [empty]
+
+### Normalize unit spacing
+FIND: (\d+)\s+(mmHg|mm\[Hg\]|mm Hg)
+REPLACE: $1 mmHg
+
+FIND: (\d+)\s*%
+REPLACE: $1%
+
+FIND: (\d+)\s+/\s*min
+REPLACE: $1 /min
+
+## FOOTER REMOVAL
+----------------
+
+### Remove "Alla uppgifter visas" and search sections
+FIND: ^(Alla uppgifter visas|Sök i din journal|Välj vilka uppgifter du vill visa|Vad vill du se\?).*$\n?
+REPLACE: [empty]
+
+### Remove "Klicka på en rad" instructions
+FIND: ^Klicka på en rad.*$\n?
+REPLACE: [empty]
+
+### Remove "Visar X av Y" pagination
+FIND: ^Visar \d+ av \d+.*$\n?
+REPLACE: [empty]
+
+## COMBINED MEGA-CLEANER (Use with caution!)
+--------------------------------------------
+
+This combines the most common patterns. Test on a copy first!
+
+FIND: ^(Gå direkt till.*|Du är här:.*|Start\s*$|Inkorg.*|Journalen\s*$|\d+\s+uppgifter hittades.*|informationstyp\s*$|vårdpersonal\s*$|Datum från|Datum till|ÅÅÅÅ-MM-DD|\*\*[A-ZÅÄÖ].*|[A-ZÅÄÖ][a-zåäö]+,\s+[A-ZÅÄÖ].*\(.*\)|Alla uppgifter visas.*|Sök i din journal.*|Klicka på en rad.*|Visar \d+ av \d+.*)$\n?
+REPLACE: [empty]
+
+## USAGE INSTRUCTIONS
+-------------------
+
+1. **BACKUP YOUR FILE FIRST!**
+
+2. **Test order** (safest to most aggressive):
+   - Start with navigation removal
+   - Then staff lists
+   - Then formatting
+   - Finally try combined cleaner
+
+3. **For VS Code**:
+   - Open file
+   - Ctrl+H for Find/Replace
+   - Click regex icon (.*) 
+   - Paste patterns
+   - Review replacements with "Find" before "Replace All"
+
+4. **For large files (900KB+)**:
+   - Consider splitting into chunks by year first
+   - Process 2005-2010, 2011-2015, 2016-2020, 2021-2025 separately
+   - Then combine after cleaning
+
+5. **Validation**:
+   - Ensure first line after cleaning starts with a date (20XX-XX-XX)
+   - Check that journal entries aren't accidentally deleted
+   - Verify lab values and medications remain intact
+
+## QUICK DIAGNOSTIC
+-----------------
+
+To check how much cleaning is needed:
+```bash
+# Count navigation lines
+grep -c "^Gå direkt till" medical.md
+
+# Count staff entries
+grep -c "^\*\*" medical.md
+
+# Count actual journal dates
+grep -c "^20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]" medical.md
+
+# Estimate cleaning potential (lines to remove)
+grep -E "^(Gå direkt|Du är här|\*\*|vårdpersonal|informationstyp|Datum från)" medical.md | wc -l
+```
+
+## POWERSHELL ONE-LINERS (Windows)
+----------------------------------
+
+# Remove navigation and save to new file
+(Get-Content medical.md) -notmatch '^(Gå direkt till|Du är här:|Start$|Inkorg)' | Set-Content medical_cleaned.md
+
+# Remove staff lists
+(Get-Content medical.md) -notmatch '^\*\*' | Set-Content medical_no_staff.md
+
+# Chain multiple cleaners
+(Get-Content medical.md) -notmatch '^(Gå direkt|^\*\*|vårdpersonal$|informationstyp$)' | Set-Content medical_clean.md
+
+## NOTES
+-------
+- These patterns are based on 1177 export format 2005-2025
+- Format may vary between regions (Kronoberg, Uppsala, etc.)
+- Always verify cleaning doesn't remove actual medical content
+- Date patterns (20XX-XX-XX) should NEVER be removed as they're entry markers

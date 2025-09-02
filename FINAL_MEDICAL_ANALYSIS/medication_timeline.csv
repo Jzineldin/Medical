@@ -1,0 +1,18 @@
+Date,Time,Medication,Dose,Action,Prescribed_by,Unit,Reason,Notes
+2025-09-01,16:01,Gabapentin Actavis,300 mg 2 kapslar middag,Fortsatt,Malin Heigis (Läkare),Vårdcentralen Hälsocentralen Falken,Neuropatisk smärta,Första insättning 2016-07-01
+2025-09-01,16:09,Duloxetin,,Utsatt,Malin Heigis (Läkare),Vårdcentralen Hälsocentralen Falken,Hypertoni-biverkning,Tror själv att Duloxetin är orsak till höga blodtrycket
+2025-09-01,16:09,Fluoxetin,,Insatt,Malin Heigis (Läkare),Vårdcentralen Hälsocentralen Falken,Viktneutralt alternativ,Ingen hypertoni som biverkning enligt FASS
+2025-09-01,16:09,Amlodipin,5 mg,Insatt,Malin Heigis (Läkare),Vårdcentralen Hälsocentralen Falken,Hypertoni,Blodtryckskontroll
+2025-09-01,16:09,Candesartan,8 mg,Fortsatt,Malin Heigis (Läkare),Vårdcentralen Hälsocentralen Falken,Hypertoni,Ökning från 4 mg
+2025-08-31,14:00,Candesartan,8 mg 1x1,Dosökning,Sofia Kaneberg (Läkare),Akutmottagningen Växjö,Hypertoni,Från 4 mg 1x1 till 8 mg 1x1
+2025-08-28,,Duloxetin,,Insatt,,,Ångest och depression,Ersättning för Mirtazapin på grund av viktuppgång
+2025-08-20,10:00,Maxalt,5 mg,Fortsatt,Måns Faxén (Läkare),Vårdcentralen Åseda,Migrän,1 tablett vid behov max 2/dag
+2025-08-20,10:00,Simvastatin SUN,20 mg 2x1,Fortsatt,Malin Heigis (Läkare),Vårdcentralen Hälsocentralen Falken,Kardiovaskulär sekundärprevention,Uppnå målvärde LDL
+2025-07-24,14:14,Stilnoct (Zolpidem),10 mg,Fortsatt,Stanislaw Steczko (Läkare),Vårdcentralen Åseda,Sömn,1 tablett till natten vid behov
+2025-06-12,11:00,Metoprolol Sandoz,50 mg 1x2,Fortsatt,Stanislaw Steczko (Läkare),Vårdcentralen Åseda,Sänker puls och blodtryck,Depottablett
+2025-06-12,10:58,Candesartan Krka,4 mg 2x1,Dosökning,Malin Heigis (Läkare),Vårdcentralen Hälsocentralen Falken,Hypertoni,Mot förhöjt blodtryck
+2025-03-28,11:20,Vi-Siblin,610 mg/g,Insatt,Malin Heigis (Läkare),Vårdcentralen Hälsocentralen Falken,Obstipation,1 dospåse vid behov dagligen
+2025-03-28,11:19,Pantoprazol Krka,20 mg 1x1,Insatt,Malin Heigis (Läkare),Vårdcentralen Hälsocentralen Falken,Gastroesofageal reflux,Enterotablett - sväljas hel
+2025-02-26,15:54,Aerius,5 mg,Fortsatt,Malin Heigis (Läkare),Vårdcentralen Hälsocentralen Falken,Allergisk rinit,1 tablett vid behov dagligen
+2025-02-26,15:54,Daktacort,Kräm,Fortsatt,Subha Krekola (Läkare),Vårdcentralen Åseda,Ekzem,1 applicering 2 gånger dagligen
+2025-02-03,14:06,Metoclopramide Orion,10 mg,Fortsatt,Malin Heigis (Läkare),Vårdcentralen Hälsocentralen Falken,Illamående,1 tablett vid behov max 3/dag
