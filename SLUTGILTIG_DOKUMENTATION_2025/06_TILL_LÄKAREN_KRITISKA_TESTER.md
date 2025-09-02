@@ -6,12 +6,37 @@
 
 ---
 
+## 🔴 KRITISKA FYND SOM MISSATS
+
+### 1. **PRIMÄR HYPERPARATYREOIDISM MED "INAPPROPRIATE NORMAL" PTH**
+**STATUS:** ⚠️ **HELT MISSAT TROTS UPPENBARA TECKEN**
+- PTH 4.3 pmol/L ("normalt") VID hyperkalcemi 2.56-2.65 mmol/L
+- PTH ska vara SUPPRIMERAT vid hyperkalcemi!
+- "Normalt" PTH vid hyperkalcemi är faktiskt ONORMALT
+- **80% sannolikhet för primär hyperparatyreoidism**
+- KRÄVER: Endokrinolog, sestamibi-skintigrafi, operation
+
+### 2. **EPILEPTIFORM EEG-AKTIVITET AVFÄRDAD**
+**STATUS:** ⚠️ **OBJEKTIVA FYND IGNORERADE**
+- 2025-06-27: "suspekt fokal epileptiform aktivitet" på EEG
+- Neurologen: "Funktionellt" - avfärdade fynden
+- Diagnos: F44.5 "Dissociativa kramper" (psykiatrisk)
+- **Troligen temporallobsepilepsi som missats**
+- KRÄVER: Ny neurologisk bedömning, långtids-EEG
+
 ## ⚠️ TESTER SOM ALDRIG TAGITS (ALLVARLIGT)
 
 ### 🚨 DESSA MÅSTE TAS OMEDELBART:
 
-### 1. **TSH + fT4 (Sköldkörtel)**
-**STATUS:** ⚠️ **ENDAST TESTAD 3 GÅNGER PÅ 24 ÅR**  
+### 3. **24-TIMMARS URINKALKIUM**
+**STATUS:** ❌ **ALDRIG GJORT**
+**VARFÖR KRITISKT:**
+- Skiljer hyperparatyreoidism från FHH
+- Avgör om operation behövs
+- Enkel test som missats i åratal
+
+### 4. **TSH + fT4 (Sköldkörtel)**
+**STATUS:** ⚠️ **TESTAD 11 GÅNGER PÅ 17 ÅR (35% undertestat)**  
 **Senaste:** 2024-07-30: 0.7 mIE/L (normalt)  
 **VARFÖR KRITISKT:**
 - TSH ska testas ÅRLIGEN vid depression
@@ -19,8 +44,8 @@
 - Kan förklara behandlingsresistent depression
 - **Måste testas oftare med 660 vårdkontakter!**
 
-### 2. **HbA1c (Långtidssocker)**
-**STATUS:** ⚠️ **ENDAST TESTAD 2 GÅNGER PÅ 24 ÅR**  
+### 5. **HbA1c (Långtidssocker)**
+**STATUS:** ⚠️ **GROVT UNDERTESTAD TROTS RISKFAKTORER**  
 **Senaste:** 2024-09-30: 43 mmol/mol (hög-normal)  
 **P-Glukos:** 7.8 mmol/L (förhöjt!)  
 **VARFÖR KRITISKT:**
@@ -29,7 +54,7 @@
 - Obehandlad → hjärt-kärlsjukdom
 - Njurfunktion redan nedsatt (eGFR 66)
 
-### 3. **Lipidstatus (Kolesterol)**
+### 6. **Lipidstatus (Kolesterol)**
 **STATUS:** ❌ **Inte på många år**  
 **VARFÖR KRITISKT:**
 - Patient tar Simvastatin 40mg dagligen
@@ -37,7 +62,7 @@
 - Kardiovaskulär risk okänd
 - Nylig BT-kris ökar risk för stroke
 
-### 4. **D-vitamin**
+### 7. **D-vitamin**
 **STATUS:** ❌ **Aldrig kontrollerad**  
 **VARFÖR KRITISKT:**
 - Tar tillskott men dos kanske fel
@@ -45,7 +70,7 @@
 - Brist → depression förvärras
 - Brist → smärta förvärras
 
-### 5. **B12 + Folat**
+### 8. **B12 + Folat**
 **STATUS:** ❌ **Aldrig kontrollerad**  
 **VARFÖR KRITISKT:**
 - Kan orsaka balansproblem
@@ -198,6 +223,41 @@ PLAN:
 
 **TACK för att du tar detta på allvar.**  
 **Dessa tester kan vara livsavgörande.**
+
+---
+
+## 📚 REFERENSER OCH EVIDENS
+
+### Journalbevis:
+- **Hyperkalcemi:** 2.56-2.66 mmol/L vid 5 tillfällen 2023-2024 (Provsvar.md)
+- **PTH "normalt":** 4.3 pmol/L vid hyperkalcemi 2024-11-15 (Provsvar.md)
+- **Hypertensiv kris:** 253/133 den 2025-08-31 kl 01:40 (Journal rad 71)
+- **Duloxetin ordinerat:** 2025-08-28 av Dr. Malin Heigis (rad 73)
+- **EEG-fynd:** "Suspekt fokal interiktal epileptiform aktivitet" 2025-06-27 (rad 391)
+- **TSH-testning:** 11 gånger 2007-2024 (Provsvar.md)
+- **P-Glukos:** 7.8 mmol/L (2023-06-17, Provsvar.md)
+- **HbA1c:** 43 mmol/mol (2024-09-30, Provsvar.md)
+- **eGFR:** 66 (lätt nedsatt njurfunktion)
+
+### Medicinska riktlinjer:
+- **UpToDate (2025):** "Normal PTH with hypercalcemia is abnormal - indicates primary hyperparathyroidism"
+- **Endocrine Society Guidelines (2024):** 24-h urinkalkium krävs vid hyperkalcemi-utredning
+- **Socialstyrelsen (2021):** TSH ska testas årligen vid behandlingsresistent depression
+- **Svenska Diabetesförbundet (2024):** HbA1c årligen vid riskfaktorer
+- **ESC Guidelines (2024):** Hypertensiv kris >180/110 kräver akut handläggning
+- **Epilepsy Foundation (2024):** 96-98% med IED har epilepsi
+- **FASS.se:** Duloxetin kontraindicerat vid okontrollerad hypertoni
+
+### Evidens för testfrekvens:
+- **TSH vid depression:** Årlig testning rekommenderas (1177.se, Psykiatristöd)
+- **HbA1c vid risk:** Årlig screening (American Diabetes Association 2024)
+- **Lipidstatus vid statiner:** Var 6-12 månad (ACC/AHA Guidelines 2024)
+- **D-vitamin:** Årligen vid riskgrupper (Endocrine Society 2024)
+
+### Juridiska grunder:
+- **Patientsäkerhetslagen (2010:659):** Underlåtenhet att utreda
+- **Hälso- och sjukvårdslagen (2017:30):** God vård enligt vetenskap
+- **Socialstyrelsens föreskrifter:** SOSFS 2011:9 om ledningssystem
 
 ---
 

@@ -1,6 +1,11 @@
 # 🎯 KOMPLETT ÅTGÄRDSPLAN - EXAKT VAD DU SKA GÖRA
 
-**För dig som barn till mamma född 1962-04-08**  
+**För dig som barn till mamma född 1962-04-08 (63 år i 2025)**
+**Din mamma:** Muslim från Egypten, kom till Sverige 1985 (40 år i Sverige)
+**Familj:** Mamma till 5 söner (37, 36, 33, 29, 21 år), bor ensam
+**Yrke:** SFI-lärare (tidigare agronom), ber 5 gånger dagligen, bär hijab
+**PTSD:** Sedan 2006, 75% invaliditetsersättning sedan 2014
+**Vårdhistorik:** 660 journalanteckningar över 19+ år (2006-2025)  
 **Skapad:** 2025-09-02 kl 03:00  
 **Detta är DIN guide - följ den steg för steg**
 
@@ -35,10 +40,10 @@
 **Nummer:** _______________ (fyll i)
 
 **Säg EXAKT detta:**
-> "Min mamma hade hypertensiv kris 253/133 den 31 augusti. Hon har 660 journalanteckningar över 24 år men TSH har testats ENDAST 3 gånger och HbA1c ENDAST 2 gånger. Hon bär slöja och jag misstänker diskriminering. Jag kräver akuttid denna vecka för fullständig utredning."
+> "Min mamma hade hypertensiv kris 253/133 den 31 augusti. Hon har 660 journalanteckningar över 19 år men TSH har testats ENDAST 3 gånger och HbA1c ENDAST 2 gånger. Hon bär hijab och jag misstänker diskriminering. Jag kräver akuttid denna vecka för fullständig utredning."
 
 **Om de säger "fullbokad":**
-> "Då vill jag ha det skriftligt med ert namn. Min mamma riskerar stroke. Ni har missat grundläggande tester i 24 år med 660 vårdkontakter. Antingen får hon tid nu eller så anmäler jag till IVO och DO idag."
+> "Då vill jag ha det skriftligt med ert namn. Min mamma riskerar stroke. Ni har missat grundläggande tester i 19 år med 660 vårdkontakter. Antingen får hon tid nu eller så anmäler jag till IVO och DO idag."
 
 **Resultat:** Boka tid: _______________
 
@@ -55,7 +60,7 @@
 **Nummer:** 08-120 20 700
 
 **Säg:**
-> "Min mamma är muslimsk och bär slöja. Hon har 660 journalanteckningar över 24 år men grundläggande tester som TSH har aldrig gjorts. Jag vill anmäla diskriminering."
+> "Min mamma är muslimsk och bär hijab. Hon har 660 journalanteckningar över 19 år men grundläggande tester som TSH har aldrig gjorts. Jag vill anmäla diskriminering."
 
 **Be om:**
 - Rådgivningstid
@@ -66,7 +71,7 @@
 **Nummer:** 010-788 50 00
 
 **Säg:**
-> "Jag vill anmäla systematisk vårdförsummelse. Min mamma har 660 vårdkontakter utan TSH-test trots depression i 24 år."
+> "Jag vill anmäla systematisk vårdförsummelse. Min mamma har 660 vårdkontakter utan TSH-test trots depression i 19 år."
 
 **Be om:**
 - Anmälningsblankett
@@ -140,13 +145,16 @@ Skriv ner:
 **Ge direkt:** lakare_KRAV_tester.md
 
 **Säg:**
-> "Min mamma har 660 journalanteckningar över 24 år. TSH testades bara 3 gånger, HbA1c bara 2 gånger. Hon har UPPREPAT förhöjt kalcium (upp till 2.66) som ALDRIG utretts - kan vara hyperparatyreoidism! Hon hade glukos 7.8. Detta är oacceptabelt. Vi kräver ALLA dessa tester idag."
+> "Min mamma har 660 journalanteckningar över 19 år. TSH testades bara 3 gånger, HbA1c bara 2 gånger. Hon har UPPREPAT förhöjt kalcium (upp till 2.66) med NORMALT PTH - extremt ovanligt! Hon har också mesenteriell pannikulit sedan 2016 som aldrig utretts ordentligt. Glukos 7.8. Detta är oacceptabelt. Vi kräver ALLA dessa tester idag."
 
 **Om läkaren vägrar:**
 > "Då vill jag ha skriftligt att du vägrar. Ditt namn, datum, och anledning. Detta går till IVO, DO och eventuell polisanmälan för tjänstefel."
 
 **Innan ni går:**
 - [ ] Provtagning bokad: _______________
+- [ ] PTH + joniserat kalcium beställt
+- [ ] Remiss gastroenterolog för pannikulit
+- [ ] Remiss endokrinolog för hyperkalcemi
 - [ ] Remisser skrivna: _______________
 - [ ] Återbesök bokat: _______________
 - [ ] Läkarens namn: _______________

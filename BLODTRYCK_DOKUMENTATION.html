@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypertonidokumentation - Sara El-zarka</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 30px;
+            background: white;
+            color: #333;
+        }
+        h1 {
+            color: #d32f2f;
+            font-size: 32px;
+            border-bottom: 4px solid #d32f2f;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #1976d2;
+            font-size: 24px;
+            margin-top: 35px;
+            border-bottom: 2px solid #1976d2;
+            padding-bottom: 8px;
+        }
+        h3 {
+            color: #424242;
+            font-size: 20px;
+            margin-top: 25px;
+        }
+        .critical-box {
+            background: #ffebee;
+            border: 2px solid #d32f2f;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+            font-weight: bold;
+        }
+        .medication-risk {
+            background: #fff3e0;
+            border-left: 5px solid #ff6f00;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .solution-box {
+            background: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th {
+            background: #1976d2;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .bp-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d32f2f;
+        }
+        .header-info {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        .recommendation {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-info">
+        <h1 style="border: none; margin: 0;">HYPERTONIDOKUMENTATION</h1>
+        <p style="margin: 10px 0;"><strong>Patient:</strong> Sara El-zarka</p>
+        <p style="margin: 10px 0;"><strong>Personnummer:</strong> 19620408-2561</p>
+        <p style="margin: 10px 0;"><strong>Datum:</strong> 2025-09-02</p>
+        <p style="margin: 10px 0;"><strong>Dokumentfokus:</strong> Blodtrycksanalys och behandling</p>
+    </div>
+
+    <div class="critical-box">
+        <h2 style="color: #d32f2f; border: none; margin-top: 0;">AKTUELL BLODTRYCKSSTATUS</h2>
+        <p class="bp-value">Aktuellt: 195/126 mmHg</p>
+        <p class="bp-value">Tidigare kris: 253/133 mmHg (31/8-2025)</p>
+        <p>HYPERTENSIV EMERGENCY - Diastoliskt >120 mmHg</p>
+    </div>
+
+    <h2>ORSAKER TILL HYPERTENSIV KRIS</h2>
+    
+    <h3>1. Läkemedelsutlöst hypertoni</h3>
+    <div class="medication-risk">
+        <p><strong>DULOXETIN (Cymbalta) - PRIMÄR ORSAK</strong></p>
+        <ul>
+            <li>Insatt: 28/8-2025</li>
+            <li>Hypertensiv kris: 31/8-2025 (BP 253/133)</li>
+            <li>Mekanism: SNRI-läkemedel höjer blodtryck via noradrenalinåterupptagshämning</li>
+            <li>Känd biverkan hos 2% av patienter</li>
+            <li>STATUS: Utsatt, ersatt med fluoxetin</li>
+        </ul>
+    </div>
+
+    <h3>2. Läkemedel som bidrar till hypertoni</h3>
+    <table>
+        <tr>
+            <th>Läkemedel</th>
+            <th>Dos</th>
+            <th>Blodtryckspåverkan</th>
+            <th>Mekanism</th>
+        </tr>
+        <tr>
+            <td><strong>Etoricoxib</strong></td>
+            <td>60mg dagligen</td>
+            <td>↑ 5-10 mmHg</td>
+            <td>COX-2-hämmare: natriumretention, minskad njurperfusion</td>
+        </tr>
+        <tr>
+            <td><strong>Gabapentin</strong></td>
+            <td>900mg dagligen</td>
+            <td>Paradoxal ↑ hos vissa</td>
+            <td>Kan ge hypertoni hos 1% av patienter</td>
+        </tr>
+        <tr>
+            <td><strong>Fluoxetin</strong></td>
+            <td>20mg dagligen</td>
+            <td>Minimal ↑</td>
+            <td>SSRI - mindre risk än SNRI</td>
+        </tr>
+        <tr>
+            <td><strong>Zolpidem</strong></td>
+            <td>10mg till natten</td>
+            <td>Rebound ↑</td>
+            <td>Morgonhypertoni vid utsättning</td>
+        </tr>
+    </table>
+
+    <h3>3. Otillräcklig antihypertensiv behandling</h3>
+    <div class="medication-risk">
+        <p><strong>Nuvarande blodtrycksmediciner - UNDERDOSERADE</strong></p>
+        <ul>
+            <li><strong>Candesartan 8mg:</strong> Startdos, bör vara 16-32mg för effekt</li>
+            <li><strong>Amlodipin 5mg:</strong> Halvdos, kan ökas till 10mg</li>
+            <li><strong>Saknar:</strong> Diuretika eller betablockerare som tillägg</li>
+        </ul>
+    </div>
+
+    <h2>LÄKEMEDELSINTERAKTIONER SOM PÅVERKAR BLODTRYCK</h2>
+    
+    <div class="medication-risk">
+        <p><strong>Etoricoxib + ARB (Candesartan)</strong></p>
+        <ul>
+            <li>Minskad effekt av candesartan</li>
+            <li>Ökad risk för njurpåverkan</li>
+            <li>Försämrad blodtryckskontroll</li>
+        </ul>
+    </div>
+
+    <h2>LÖSNINGAR OCH ÅTGÄRDER</h2>
+
+    <h3>OMEDELBART (Inom 24 timmar)</h3>
+    <div class="solution-box">
+        <ol>
+            <li><strong>Sätt ut etoricoxib</strong> - Ersätt med paracetamol 1g x 3-4</li>
+            <li><strong>Öka candesartan</strong> till 16mg omedelbart</li>
+            <li><strong>Hemblodtrycksmätning</strong> 3 ggr dagligen</li>
+            <li><strong>Om BP >180/120:</strong> Akutmottagning för IV-behandling</li>
+        </ol>
+    </div>
+
+    <h3>INOM 1 VECKA</h3>
+    <div class="solution-box">
+        <ol>
+            <li><strong>Titrering av mediciner:</strong>
+                <ul>
+                    <li>Candesartan upp till 32mg vid behov</li>
+                    <li>Amlodipin upp till 10mg om nödvändigt</li>
+                </ul>
+            </li>
+            <li><strong>Lägg till diuretika:</strong> Hydroklorthiazid 12.5-25mg</li>
+            <li><strong>24-timmars blodtrycksmätning</strong> för utvärdering</li>
+        </ol>
+    </div>
+
+    <h3>LÅNGSIKTIG PLAN</h3>
+    <div class="solution-box">
+        <ol>
+            <li><strong>Målblodtryck:</strong> <140/90 mmHg</li>
+            <li><strong>Överväg betablockerare</strong> (bisoprolol 2.5-5mg) vid otillräcklig kontroll</li>
+            <li><strong>Undvik framtida SNRI</strong> (duloxetin, venlafaxin)</li>
+            <li><strong>Undvik COX-2-hämmare</strong> permanent</li>
+        </ol>
+    </div>
+
+    <h2>REKOMMENDERAD MEDICINERING</h2>
+    
+    <div class="recommendation">
+        <h3>Optimal antihypertensiv kombination:</h3>
+        <table>
+            <tr>
+                <th>Läkemedel</th>
+                <th>Rekommenderad dos</th>
+                <th>Kommentar</th>
+            </tr>
+            <tr>
+                <td>Candesartan</td>
+                <td>16-32mg dagligen</td>
+                <td>Öka från nuvarande 8mg</td>
+            </tr>
+            <tr>
+                <td>Amlodipin</td>
+                <td>5-10mg dagligen</td>
+                <td>Kan ökas vid behov</td>
+            </tr>
+            <tr>
+                <td>Hydroklorthiazid</td>
+                <td>12.5-25mg dagligen</td>
+                <td>Lägg till som tredje linjens behandling</td>
+            </tr>
+            <tr>
+                <td>Bisoprolol</td>
+                <td>2.5-5mg dagligen</td>
+                <td>Vid behov som fjärde läkemedel</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>KONTRAINDIKATIONER</h2>
+    
+    <div class="critical-box">
+        <h3 style="margin-top: 0;">Läkemedel att ALDRIG ge:</h3>
+        <ul>
+            <li><strong>Duloxetin (Cymbalta)</strong> - Gav hypertensiv kris</li>
+            <li><strong>Venlafaxin (Efexor)</strong> - Samma mekanism som duloxetin</li>
+            <li><strong>Alla COX-2-hämmare</strong> - Höjer blodtryck, njurpåverkan</li>
+            <li><strong>Systemiska steroider</strong> - Höjer blodtryck (undantag: akut behandling)</li>
+        </ul>
+    </div>
+
+    <h2>MONITORERING</h2>
+    
+    <div class="recommendation">
+        <h3>Uppföljningsschema:</h3>
+        <ul>
+            <li><strong>Dagligen:</strong> Hemblodtryck morgon och kväll</li>
+            <li><strong>Vecka 1:</strong> Återbesök för dosjustering</li>
+            <li><strong>Månad 1:</strong> Utvärdering av behandlingseffekt</li>
+            <li><strong>Var 3:e månad:</strong> Kontroll av njurfunktion (eGFR, kreatinin)</li>
+            <li><strong>Årligen:</strong> 24-timmars blodtrycksmätning</li>
+        </ul>
+    </div>
+
+    <h2>VARNINGSSIGNALER</h2>
+    
+    <div class="critical-box">
+        <h3 style="margin-top: 0;">Sök akutvård om:</h3>
+        <ul>
+            <li>Blodtryck >180/120 mmHg</li>
+            <li>Bröstsmärta</li>
+            <li>Andnöd</li>
+            <li>Synpåverkan</li>
+            <li>Förvirring eller huvudvärk</li>
+            <li>Neurologiska symtom</li>
+        </ul>
+    </div>
+
+    <div style="margin-top: 50px; padding: 20px; background: #f5f5f5; border-radius: 8px;">
+        <p style="text-align: center; margin: 0;">
+            <strong>Dokumentet fokuserar uteslutande på blodtryckshantering</strong><br>
+            <em>Upprättat: 2025-09-02</em><br>
+            <em>Patient: Sara El-zarka, 19620408-2561</em>
+        </p>
+    </div>
+</body>
+</html>

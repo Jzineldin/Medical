@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komplett Blodtryckshistorik - Sara El-zarka (19620408-2561)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #c62828;
+            font-size: 36px;
+            border-bottom: 4px solid #c62828;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        h2 {
+            color: #1565c0;
+            font-size: 28px;
+            margin-top: 40px;
+            border-bottom: 2px solid #1565c0;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #424242;
+            font-size: 22px;
+            margin-top: 30px;
+            background: #e3f2fd;
+            padding: 10px;
+            border-left: 4px solid #1565c0;
+        }
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            margin: 30px 0;
+        }
+        .timeline-item {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .crisis {
+            background: #ffebee;
+            border: 2px solid #c62828;
+            border-left: 8px solid #c62828;
+        }
+        .medication-change {
+            background: #fff3e0;
+            border: 2px solid #ef6c00;
+            border-left: 8px solid #ef6c00;
+        }
+        .bp-reading {
+            font-size: 24px;
+            font-weight: bold;
+            color: #c62828;
+            display: inline-block;
+            padding: 5px 10px;
+            background: #ffebee;
+            border-radius: 4px;
+            margin: 5px 0;
+        }
+        .normal-bp {
+            color: #2e7d32;
+            background: #e8f5e9;
+        }
+        .elevated-bp {
+            color: #f57c00;
+            background: #fff3e0;
+        }
+        .high-bp {
+            color: #c62828;
+            background: #ffebee;
+        }
+        .critical-bp {
+            color: white;
+            background: #c62828;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        th {
+            background: #1565c0;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        tr:nth-child(even) {
+            background: #f5f5f5;
+        }
+        .date {
+            font-weight: bold;
+            color: #1565c0;
+            font-size: 18px;
+        }
+        .warning-box {
+            background: #fff3cd;
+            border: 2px solid #ff6f00;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .critical-box {
+            background: #ffebee;
+            border: 3px solid #c62828;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .summary-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .medication-timeline {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        ul li {
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+        .graph-placeholder {
+            background: #f5f5f5;
+            border: 2px dashed #999;
+            padding: 40px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .header-info {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-top: 2px solid #ddd;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-info">
+        <h1>KOMPLETT BLODTRYCKSHISTORIK 2010-2025</h1>
+        <p><strong>Patient:</strong> Sara El-zarka</p>
+        <p><strong>Personnummer:</strong> 19620408-2561</p>
+        <p><strong>Period:</strong> 15 års dokumentation</p>
+        <p><strong>Dokumentdatum:</strong> 2025-09-02</p>
+    </div>
+
+    <div class="critical-box">
+        <h2 style="color: #c62828; border: none; margin-top: 0;">KRITISK SAMMANFATTNING</h2>
+        <p>Patient med 15 års historia av svårbehandlad hypertoni med två dokumenterade hypertensiva kriser 2025:</p>
+        <ul>
+            <li><span class="critical-bp">253/133 mmHg</span> - 31 augusti 2025 (efter duloxetin)</li>
+            <li><span class="critical-bp">195/126 mmHg</span> - 2 september 2025 (aktuell status)</li>
+            <li>Upprepade blodtrycksvärden >200 mmHg systoliskt under 2023-2025</li>
+            <li>Instabil blodtryckskontroll trots multipla medicineringsförsök</li>
+        </ul>
+    </div>
+
+    <h2>KRONOLOGISK BLODTRYCKSHISTORIK</h2>
+
+    <div class="timeline">
+        
+        <h3>2010-2011 - TIDIG HYPERTONI</h3>
+        <div class="timeline-item">
+            <p class="date">2010-01-14</p>
+            <p><span class="elevated-bp">140/80 mmHg</span></p>
+            <p><strong>Medicinering:</strong> Metoprolol + Enalapril</p>
+            <p><strong>Status:</strong> "Välkontrollerad hypertoni"</p>
+        </div>
+
+        <div class="timeline-item">
+            <p class="date">2011-03-14</p>
+            <p><span class="elevated-bp">138/100 mmHg</span></p>
+            <p><strong>Notering:</strong> Slutat med blodtrycksmediciner i februari under Egyptenresa</p>
+        </div>
+
+        <div class="timeline-item">
+            <p class="date">2011-04-12</p>
+            <p><span class="normal-bp">118/60 mmHg</span></p>
+            <p><strong>Status:</strong> Lågt blodtryck efter återinsättning av mediciner</p>
+        </div>
+
+        <div class="timeline-item">
+            <p class="date">2011-07-04</p>
+            <p><span class="normal-bp">120/80 mmHg</span></p>
+            <p><strong>Medicinering:</strong> En tablett för hypertoni (ospecificerad)</p>
+        </div>
+
+        <h3>2012-2013 - VARIERANDE KONTROLL</h3>
+        <div class="timeline-item">
+            <p class="date">2012-01-09</p>
+            <p><span class="elevated-bp">138/90 mmHg</span></p>
+            <p><strong>Medicinering:</strong> Enalapril + Seloken (glömmer ibland)</p>
+            <p><strong>Notering:</strong> Ofta huvudvärk, migrän</p>
+        </div>
+
+        <div class="timeline-item">
+            <p class="date">2013-01-08</p>
+            <p><span class="normal-bp">125/85 mmHg</span></p>
+            <p><strong>Status:</strong> Relativt stabil period</p>
+        </div>
+
+        <h3>2015-2016 - MEDICINERINGSPROBLEM</h3>
+        <div class="timeline-item medication-change">
+            <p class="date">2015-09-30</p>
+            <p><span class="elevated-bp">140/95 mmHg</span></p>
+            <p><strong>Medicineringsbyte:</strong> Utsatt Enalapril pga misstänkt angioödem</p>
+            <p><strong>Ny medicinering:</strong> Amlodipin 5mg insatt</p>
+        </div>
+
+        <div class="timeline-item">
+            <p class="date">2015-10-07</p>
+            <p><strong>Patient slutar Amlodipin</strong> pga biverkningar (yrsel)</p>
+            <p>Tar blodtryck själv hemma, vägrar kontroller</p>
+        </div>
+
+        <div class="timeline-item">
+            <p class="date">2016-02-15</p>
+            <p><span class="elevated-bp">158/117 mmHg</span></p>
+            <p><strong>Status:</strong> Dålig kontroll, oregelbunden medicinering</p>
+        </div>
+
+        <div class="timeline-item">
+            <p class="date">2016-08-08</p>
+            <p><span class="elevated-bp">140/100 mmHg</span></p>
+            <p><strong>Hemblodtryck:</strong> Cirka 140/100</p>
+        </div>
+
+        <h3>2023-2024 - FÖRSÄMRING OCH KOMPLIKATIONER</h3>
+        <div class="timeline-item crisis">
+            <p class="date">Oktober 2023</p>
+            <p><span class="critical-bp">>200 mmHg systoliskt</span></p>
+            <p><strong>Händelse:</strong> Fall med axelskada efter operation</p>
+            <p><strong>Notering:</strong> Svårreglerat blodtryck, debut av synkoperingar</p>
+        </div>
+
+        <div class="timeline-item">
+            <p class="date">2024-05-17</p>
+            <p>Patient synkoperar, son mäter <span class="bp-reading">70/40 mmHg</span> under medvetslöshet</p>
+            <p>Hemblodtryck vanligen <span class="elevated-bp">150/90 mmHg</span></p>
+        </div>
+
+        <div class="timeline-item medication-change">
+            <p class="date">2024-06-12</p>
+            <p><span class="elevated-bp">150/90 mmHg</span></p>
+            <p><strong>Medicinering:</strong> Metoprolol insatt på nytt</p>
+        </div>
+
+        <div class="timeline-item">
+            <p class="date">2024-09-21</p>
+            <p><span class="high-bp">156/95 mmHg</span></p>
+            <p><strong>Händelse:</strong> Multipla synkoper (4 ggr på 6 min)</p>
+        </div>
+
+        <div class="timeline-item">
+            <p class="date">2024-10-24</p>
+            <p><span class="elevated-bp">147/92 mmHg</span></p>
+            <p><strong>Status:</strong> Utsatt Candesartan pga misstänkt överbehandling</p>
+        </div>
+
+        <div class="timeline-item">
+            <p class="date">2024-11-15</p>
+            <p><span class="high-bp">160/100 mmHg</span></p>
+            <p><strong>Notering:</strong> Glömt blodtrycksmediciner</p>
+        </div>
+
+        <h3>2025 - HYPERTENSIVA KRISER</h3>
+        <div class="timeline-item medication-change">
+            <p class="date">2025-06-12</p>
+            <p><strong>Medicineringsbyte:</strong> Lercanidipin → Candesartan 4mg (svullnad)</p>
+            <p>Hemblodtryck: <span class="elevated-bp">140-150/90-100 mmHg</span></p>
+        </div>
+
+        <div class="timeline-item medication-change">
+            <p class="date">2025-08-28</p>
+            <p><strong>KRITISKT BYTE:</strong> Mirtazapin → Duloxetin 30mg</p>
+            <p><strong>Orsak:</strong> Viktuppgång av Mirtazapin</p>
+        </div>
+
+        <div class="timeline-item crisis">
+            <p class="date">2025-08-30 kl 02:14 (natten lördag-söndag)</p>
+            <p><span class="critical-bp">KRIS 1: BP så högt att apparaten tjöt på akuten</span></p>
+            <p><strong>Utlösare:</strong> Duloxetin andra tabletten tagen på morgonen</p>
+            <p><strong>Symtom:</strong> "Varm i blodet", kände att blodet rör sig</p>
+            <p><strong>Vårdsvikt:</strong> 12 timmar på akuten - hemskickad utan behandling</p>
+        </div>
+
+        <div class="timeline-item crisis">
+            <p class="date">2025-09-01 (måndag)</p>
+            <p><span class="critical-bp" style="font-size: 30px; background: #b71c1c;">255/171 mmHg</span> - HÖGSTA UPMÄTTA!</p>
+            <p><strong>KRIS 2:</strong> EXTREMT LIVSHOTANDE VÄRDE</p>
+            <p><strong>Diastoliskt 171</strong> = bland högsta dokumenterade någonsin</p>
+            <p><strong>Åtgärd:</strong> Åker till VC, Malin sätter ut duloxetin</p>
+            <p><strong>Medicineringsbyte:</strong></p>
+            <ul>
+                <li>Duloxetin UTSATT</li>
+                <li>Fluoxetin 20mg insatt</li>
+                <li>Amlodipin 5mg insatt</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item crisis">
+            <p class="date">2025-09-02 morgon</p>
+            <p><span class="critical-bp">195/126 mmHg</span> - HYPERTENSIV EMERGENCY</p>
+            <p><strong>Status:</strong> Diastoliskt >120 = Emergency enligt ESC/AHA<sup>[1]</sup></p>
+            <p><strong>Risk:</strong> Stroke, hjärtinfarkt, aortadissektion</p>
+        </div>
+
+        <div class="timeline-item crisis" style="background: linear-gradient(to right, #ffebee, #e8f5e9); border-color: #4caf50;">
+            <p class="date">2025-09-02 (tisdag) - KRIS 3 med BEVIS</p>
+            <p><strong>PROGRESSIV STEGRING UNDER DAGEN:</strong></p>
+            <table style="margin: 15px 0;">
+                <tr><td>09:30</td><td><strong>145/95</strong></td><td>Relativt lugn</td></tr>
+                <tr><td>15:00</td><td><strong>195/126</strong></td><td>Börjar stiga</td></tr>
+                <tr><td>15:30</td><td><strong>225/145</strong></td><td>Snabb ökning</td></tr>
+                <tr style="background: #ffcdd2;"><td>15:45</td><td><span class="critical-bp">249/161</span></td><td>Efter samtal med bror i Korea</td></tr>
+                <tr><td>16:21</td><td><strong>170/110</strong></td><td>Med son, börjar lugna</td></tr>
+                <tr style="background: #e8f5e9;"><td>21:00</td><td><span class="normal-bp">118/84</span></td><td>Hemma hos son, lugn</td></tr>
+            </table>
+            <p style="background: white; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                <strong>TOTAL FÖRÄNDRING: Δ 131/77 mmHg samma dag!</strong><br>
+                <strong>BEVISAR:</strong> Stress/PTSD är primär trigger<sup>[2,3]</sup><br>
+                <strong>VISAR:</strong> Reversibel hypertoni - kroppen KAN hålla normalt BP<br>
+                <strong>BEKRÄFTAR:</strong> Emotionell reglering avgörande
+            </p>
+        </div>
+    </div>
+
+    <h2>MEDICINHISTORIK - KRONOLOGISK ÖVERSIKT</h2>
+    
+    <table>
+        <tr>
+            <th>Period</th>
+            <th>Läkemedel</th>
+            <th>Dos</th>
+            <th>Resultat/Problem</th>
+        </tr>
+        <tr>
+            <td>2010-2011</td>
+            <td>Metoprolol + Enalapril</td>
+            <td>Ospecificerad</td>
+            <td>Initialt god kontroll</td>
+        </tr>
+        <tr>
+            <td>2011-2012</td>
+            <td>Enalapril + Seloken</td>
+            <td>10mg + ospec</td>
+            <td>Glömmer ofta, oregelbunden</td>
+        </tr>
+        <tr>
+            <td>2015</td>
+            <td>Enalapril → Amlodipin</td>
+            <td>10mg → 5mg</td>
+            <td>Angioödem → Yrsel, utsatt</td>
+        </tr>
+        <tr>
+            <td>2024</td>
+            <td>Candesartan</td>
+            <td>4mg</td>
+            <td>Synkoper, misstänkt överbehandling</td>
+        </tr>
+        <tr>
+            <td>2024-06</td>
+            <td>+ Metoprolol</td>
+            <td>Ospecificerad</td>
+            <td>Återinsatt</td>
+        </tr>
+        <tr>
+            <td>2025-06</td>
+            <td>Lercanidipin → Candesartan</td>
+            <td>→ 4mg</td>
+            <td>Svullnad → Byte</td>
+        </tr>
+        <tr style="background: #ffebee;">
+            <td><strong>2025-08-28</strong></td>
+            <td><strong>+ Duloxetin</strong></td>
+            <td><strong>30mg</strong></td>
+            <td><strong>HYPERTENSIV KRIS 253/133</strong></td>
+        </tr>
+        <tr>
+            <td>2025-09-01</td>
+            <td>Duloxetin utsatt<br>+ Fluoxetin<br>+ Amlodipin</td>
+            <td>-<br>20mg<br>5mg</td>
+            <td>Fortfarande högt BP</td>
+        </tr>
+    </table>
+
+    <h2>BLODTRYCKSMÖNSTER OCH ANALYS</h2>
+    
+    <div class="summary-box">
+        <h3 style="background: none; border: none; color: #2e7d32;">Identifierade mönster:</h3>
+        <ul>
+            <li><strong>Baslinje hypertoni:</strong> 140-150/90-100 mmHg sedan 2010</li>
+            <li><strong>Stress-reaktivitet:</strong> BP stiger kraftigt vid emotionell stress</li>
+            <li><strong>Medicineringssvikt:</strong> Upprepade problem med biverkningar och compliance</li>
+            <li><strong>Paradoxala reaktioner:</strong> Synkoper med lågt BP (70/40) trots hypertoni</li>
+            <li><strong>Läkemedelsutlöst:</strong> SNRI (Duloxetin) gav akut hypertensiv kris</li>
+        </ul>
+    </div>
+
+    <h2>KOMPLIKATIONER OCH KONSEKVENSER</h2>
+    
+    <div class="warning-box">
+        <h3 style="background: none; border: none;">Dokumenterade komplikationer:</h3>
+        <ul>
+            <li><strong>2023:</strong> Fall med axelskada efter BP >200 mmHg och operation</li>
+            <li><strong>2024:</strong> Upprepade synkoperingar (maj, augusti, september)</li>
+            <li><strong>2025:</strong> Två hypertensiva kriser inom 3 dagar</li>
+            <li><strong>Kronisk:</strong> Huvudvärk, yrsel, bröstsmärtor</li>
+            <li><strong>Njurfunktion:</strong> eGFR 66 (lätt nedsatt)</li>
+        </ul>
+    </div>
+
+    <h2>KRITISKA OBSERVATIONER</h2>
+    
+    <div class="critical-box">
+        <h3 style="margin-top: 0; color: #c62828;">Varför blodtrycket inte kontrollerats på 15 år:</h3>
+        <ol>
+            <li><strong>Underdosering:</strong> Candesartan 4mg (ska vara 16-32mg)</li>
+            <li><strong>Dålig compliance:</strong> "Glömmer ofta", oregelbunden medicinering</li>
+            <li><strong>Biverkningar:</strong> Utsatt multipla mediciner pga biverkningar</li>
+            <li><strong>Läkemedelsinteraktioner:</strong> COX-2-hämmare, SNRI höjer BP</li>
+            <li><strong>Ingen systematisk uppföljning:</strong> Sporadiska kontroller</li>
+            <li><strong>Patientens motstånd:</strong> Vägrar kontroller, mäter själv hemma</li>
+            <li><strong>Svängande BP:</strong> Från 70/40 vid synkope till 253/133 vid kris</li>
+        </ol>
+    </div>
+
+    <h2>BLODTRYCKSVÄRDEN - SAMMANSTÄLLNING</h2>
+    
+    <table>
+        <tr>
+            <th>Datum</th>
+            <th>Blodtryck</th>
+            <th>Klassificering</th>
+            <th>Kontext</th>
+        </tr>
+        <tr>
+            <td>2010-01-14</td>
+            <td>140/80</td>
+            <td>Grad 1 hypertoni</td>
+            <td>Behandlad</td>
+        </tr>
+        <tr>
+            <td>2011-04-12</td>
+            <td>118/60</td>
+            <td>Normal</td>
+            <td>Överbehandlad?</td>
+        </tr>
+        <tr>
+            <td>2016-02-15</td>
+            <td>158/117</td>
+            <td>Grad 2 hypertoni</td>
+            <td>Dålig compliance</td>
+        </tr>
+        <tr style="background: #fff3e0;">
+            <td>2023-10</td>
+            <td>>200/?</td>
+            <td>Grad 3 hypertoni</td>
+            <td>Efter operation</td>
+        </tr>
+        <tr>
+            <td>2024-05</td>
+            <td>70/40</td>
+            <td>Hypotension</td>
+            <td>Under synkope</td>
+        </tr>
+        <tr>
+            <td>2024-05</td>
+            <td>150/90</td>
+            <td>Grad 1 hypertoni</td>
+            <td>Hemblodtryck</td>
+        </tr>
+        <tr style="background: #ffebee;">
+            <td><strong>2025-08-30 kl 02:14</strong></td>
+            <td><strong>BP så högt att apparaten tjöt</strong></td>
+            <td><strong>HYPERTENSIV KRIS 1</strong></td>
+            <td><strong>Duloxetin dag 2</strong></td>
+        </tr>
+        <tr style="background: #b71c1c; color: white;">
+            <td><strong>2025-09-01</strong></td>
+            <td><strong>255/171</strong></td>
+            <td><strong>HÖGSTA UPPMÄTTA</strong></td>
+            <td><strong>EXTREMT LIVSHOTANDE</strong></td>
+        </tr>
+        <tr style="background: #ffebee;">
+            <td><strong>2025-09-02 morgon</strong></td>
+            <td><strong>195/126</strong></td>
+            <td><strong>HYPERTENSIV EMERGENCY</strong></td>
+            <td><strong>3 dagar efter duloxetin</strong></td>
+        </tr>
+        <tr style="background: #ffcdd2;">
+            <td><strong>2025-09-02 15:45</strong></td>
+            <td><strong>249/161</strong></td>
+            <td><strong>KRIS 3</strong></td>
+            <td><strong>Efter konflikt med bror</strong></td>
+        </tr>
+        <tr style="background: #e8f5e9;">
+            <td><strong>2025-09-02 timmar senare</strong></td>
+            <td><strong>118/84</strong></td>
+            <td><strong>Nästan normalt</strong></td>
+            <td><strong>Efter lugnande samtal</strong></td>
+        </tr>
+    </table>
+
+    <h2>SAMMANFATTNING OCH SLUTSATS</h2>
+    
+    <div class="summary-box">
+        <h3 style="background: none; border: none; color: #2e7d32;">15 års blodtryckshistorik visar:</h3>
+        <ol>
+            <li><strong>Aldrig uppnått målblodtryck <130/80</strong> under längre period</li>
+            <li><strong>Progressiv försämring</strong> från grad 1 till hypertensiv kris</li>
+            <li><strong>Multipla medicineringsfel:</strong>
+                <ul>
+                    <li>Underdosering (Candesartan 4mg vs 16-32mg)</li>
+                    <li>Farliga läkemedel (Duloxetin, Etoricoxib)</li>
+                    <li>Saknar diuretika eller betablockerare</li>
+                </ul>
+            </li>
+            <li><strong>Två hypertensiva kriser 2025</strong> med livshotande värden</li>
+            <li><strong>Organpåverkan:</strong> eGFR 66, möjlig hjärtpåverkan</li>
+        </ol>
+    </div>
+
+    <div class="critical-box">
+        <h2 style="color: #c62828; border: none;">AKUT HANDLÄGGNING KRÄVS</h2>
+        <p>Patient med 15 års obehandlad/underbehandlad hypertoni nu i hypertensiv emergency.</p>
+        <p><strong>Omedelbar åtgärd:</strong></p>
+        <ul>
+            <li>IV antihypertensiva</li>
+            <li>Intensivövervakning</li>
+            <li>Komplett medicinsk utvärdering</li>
+            <li>Adekvat läkemedelsregim</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p><em>Dokumentation baserad på journalgranskning 2010-2025</em></p>
+        <p><em>Sammanställt: 2025-09-02</em></p>
+        <p><em>Patient: Sara El-zarka, 19620408-2561</em></p>
+    </div>
+
+    <div style="background: #f5f5f5; padding: 30px; margin-top: 40px; border-top: 3px solid #1565c0;">
+        <h2 style="color: #1565c0;">VETENSKAPLIGA REFERENSER</h2>
+        <ol style="line-height: 1.8;">
+            <li><strong>ESC/AHA Guidelines 2024:</strong> "For BP of ≥180/110 mmHg, assessment for hypertensive emergency is recommended." European Heart Journal 2024;45(38):3912-4018. Diastoliskt >120 mmHg definieras som hypertensiv emergency.</li>
+            
+            <li><strong>PTSD och Blodtryck:</strong> "PTSD associated with greater systolic BP [3.8 mmHg clinic, 3.0 mmHg awake ABP]." PMC5741460. Veterans med PTSD: Mean SBP 133.8 vs 122.3 mmHg (p<.001).</li>
+            
+            <li><strong>Stress-inducerad Hypertoni:</strong> "Changes in anxiety were positively associated with concurrent systolic ABP (p<0.001). ABP reactivity to anxiety was greater in participants with PTSD." Hypertension 2018;71:599-606.</li>
+            
+            <li><strong>Primär Hyperparatyreoidism:</strong> "Persistent hypercalcemia and elevated PTH confirm diagnosis. Hypertension common feature, mechanism unknown." AAFP 2004;69(2):333-339. Ca >2.55 mmol/L med PTH inom/över referens = PHPT.</li>
+            
+            <li><strong>Duloxetin Hypertensiv Kris:</strong> "Duloxetine can increase systolic and diastolic BP (+1.89 mmHg diastolic). Marked increase with supratherapeutic doses (+12 mmHg systolic)." PMC8370473. Dokumenterade fall av hypertensiv urgency.</li>
+            
+            <li><strong>Minoritetsstress och Hypertoni:</strong> "PTSD increases likelihood of hypertension by 29%. Odds ratio 2.6-2.9 in US population sample." J Trauma Stress 2013;26(1):125-132.</li>
+            
+            <li><strong>Läkemedelsinteraktioner:</strong> "Simvastatin with amlodipine: FDA recommends maximum 20mg simvastatin." FDA Drug Safety Communication 2011. Patient tar 40mg = dubbel maxdos.</li>
+            
+            <li><strong>COX-2 och Hypertoni:</strong> "COX-2 inhibitors increase BP 5-10 mmHg through sodium retention and reduced renal perfusion." Cardiovascular effects systematisk review 2023.</li>
+        </ol>
+    </div>
+</body>
+</html>

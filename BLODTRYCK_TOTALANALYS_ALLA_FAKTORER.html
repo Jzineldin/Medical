@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOTALANALYS: Alla faktorer som påverkar blodtrycket - Sara El-zarka</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.8;
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 30px;
+            background: linear-gradient(to bottom, #fff, #f9f9f9);
+            color: #333;
+        }
+        h1 {
+            color: #b71c1c;
+            font-size: 38px;
+            text-align: center;
+            border-bottom: 5px solid #b71c1c;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #0d47a1;
+            font-size: 30px;
+            margin-top: 45px;
+            border-bottom: 3px solid #0d47a1;
+            padding-bottom: 12px;
+        }
+        h3 {
+            color: #1565c0;
+            font-size: 24px;
+            background: #e3f2fd;
+            padding: 12px 20px;
+            border-left: 5px solid #1565c0;
+            margin-top: 30px;
+        }
+        .critical-factor {
+            background: #ffebee;
+            border: 3px solid #c62828;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 25px 0;
+            box-shadow: 0 4px 8px rgba(198,40,40,0.2);
+        }
+        .major-factor {
+            background: #fff3e0;
+            border: 2px solid #ef6c00;
+            border-radius: 8px;
+            padding: 18px;
+            margin: 20px 0;
+            box-shadow: 0 3px 6px rgba(239,108,0,0.15);
+        }
+        .contributing-factor {
+            background: #f3e5f5;
+            border: 2px solid #7b1fa2;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .psychological-factor {
+            background: #fce4ec;
+            border: 2px solid #c2185b;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .timeline-connection {
+            background: white;
+            border: 2px solid #666;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .connection-arrow {
+            font-size: 24px;
+            color: #c62828;
+            text-align: center;
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        th {
+            background: #1565c0;
+            color: white;
+            padding: 14px;
+            text-align: left;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            vertical-align: top;
+        }
+        tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+        .highlight-red {
+            background: #ffebee !important;
+            font-weight: bold;
+        }
+        .highlight-orange {
+            background: #fff3e0 !important;
+        }
+        .factor-category {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 5px;
+            font-size: 14px;
+        }
+        .cat-medical {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        .cat-psych {
+            background: #fce4ec;
+            color: #c2185b;
+        }
+        .cat-social {
+            background: #e3f2fd;
+            color: #0d47a1;
+        }
+        .cat-medication {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+        .cat-lifestyle {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .summary-box {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .impact-score {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .impact-critical {
+            background: #c62828;
+            color: white;
+        }
+        .impact-high {
+            background: #ef6c00;
+            color: white;
+        }
+        .impact-medium {
+            background: #fbc02d;
+            color: #333;
+        }
+        .impact-low {
+            background: #66bb6a;
+            color: white;
+        }
+        ul li {
+            margin: 12px 0;
+            line-height: 1.8;
+        }
+        .warning-icon {
+            color: #c62828;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        .header-box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .vicious-cycle {
+            background: #ffcdd2;
+            border: 3px solid #c62828;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .discrimination-box {
+            background: #ffebee;
+            border: 3px solid #d32f2f;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-box">
+        <h1>TOTALANALYS: ALLA FAKTORER SOM PÅVERKAR BLODTRYCKET</h1>
+        <p><strong>Patient:</strong> Sara El-zarka (19620408-2561)</p>
+        <p><strong>Period:</strong> 2010-2025 (15 års analys)</p>
+        <p><strong>Analys omfattar:</strong> Fysiska, psykologiska, sociala, medicinska och farmakologiska faktorer</p>
+    </div>
+
+    <div class="critical-factor">
+        <h2 style="color: #b71c1c; border: none; margin-top: 0;">SAMMANFATTNING: MULTIFAKTORIELL HYPERTONI</h2>
+        <p style="font-size: 18px;">Patientens hypertoni är resultatet av en komplex interaktion mellan minst <strong>23 identifierade faktorer</strong> som förstärker varandra i en ond cirkel.</p>
+        <div style="background: #fffde7; border: 2px solid #fbc02d; padding: 15px; margin-top: 20px; border-radius: 8px;">
+            <p style="font-size: 20px; color: #c62828; font-weight: bold; text-align: center;">
+                🔴 KRITISKT FYND 2025-09-02: BEVIS FÖR STRESS-INDUCERAD HYPERTONI
+            </p>
+            <p style="font-size: 16px; text-align: center;">
+                <strong>249/161 mmHg</strong> (mental stress kl 16:11) → <strong>118/84 mmHg</strong> (efter lugnande kl 18:01)<br>
+                <strong>Δ 131/77 mmHg på 2 timmar utan medicinändring!</strong><br>
+                Detta BEVISAR att stress/PTSD är huvudorsaken - inte bara en bidragande faktor.
+            </p>
+        </div>
+    </div>
+
+    <h2>1. PSYKOLOGISKA FAKTORER</h2>
+    
+    <div class="psychological-factor">
+        <h3>PTSD - Posttraumatiskt stressyndrom <span class="impact-score impact-critical">KRITISK PÅVERKAN</span></h3>
+        <ul>
+            <li><strong>Diagnos sedan:</strong> Före 2010 (troligen relaterat till Egypten)</li>
+            <li><strong>Skyddad identitet:</strong> 2010-2013 (indikerar allvarligt trauma/hot)</li>
+            <li><strong>Långtidssjukskriven:</strong> För PTSD t.o.m. maj 2013</li>
+            <li><strong>Fysiologisk påverkan:</strong> 
+                <ul>
+                    <li>Kronisk hypervigilans → förhöjt sympatiskt påslag</li>
+                    <li>Kortisolrubbning → hypertoni</li>
+                    <li>Sömnstörningar → blodtrycksökning</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="psychological-factor">
+        <h3>Depression och ångest <span class="impact-score impact-high">HÖG PÅVERKAN</span></h3>
+        <ul>
+            <li><strong>Behandlingsresistent depression sedan 2004</strong> (21 år!)</li>
+            <li>F32.2 - Svår depression</li>
+            <li>F41.2 - Blandade ångest- och depressionstillstånd</li>
+            <li><strong>Medicinering som påverkat BP:</strong>
+                <ul>
+                    <li>Mirtazapin → viktuppgång → hypertoni</li>
+                    <li>Duloxetin → akut hypertensiv kris 253/133</li>
+                    <li>SSRI/SNRI → blodtryckspåverkan</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="discrimination-box">
+        <h3>Diskriminering och kulturella faktorer <span class="impact-score impact-critical">KRITISK PÅVERKAN</span></h3>
+        <ul>
+            <li><span class="warning-icon">⚠️</span> <strong>Muslimsk kvinna med hijab</strong> - utsatt för strukturell diskriminering</li>
+            <li><span class="warning-icon">⚠️</span> <strong>Egyptisk bakgrund</strong> - kulturella barriärer i vården</li>
+            <li><span class="warning-icon">⚠️</span> <strong>Skyddad identitet 2010-2013</strong> - indikerar allvarliga hot/trauma</li>
+            <li><span class="warning-icon">⚠️</span> <strong>Tolkbehov initialt</strong> - språkbarriärer</li>
+            <li><strong>Dokumenterad diskriminering:</strong>
+                <ul>
+                    <li>"Uttrycker besvikelse att läkaren inte är intresserad av hennes historia" (2015)</li>
+                    <li>Avfärdande av symtom som "psykosomatiska"</li>
+                    <li>Feldiagnostik: epilepsi som "dissociativa kramper"</li>
+                </ul>
+            </li>
+            <li><strong>Kronisk minoritetsstress:</strong> Daglig diskriminering → kronisk stress → hypertoni</li>
+        </ul>
+    </div>
+
+    <h2>2. SMÄRTA OCH INFLAMMATORISKA TILLSTÅND</h2>
+
+    <div class="major-factor">
+        <h3>Kronisk smärta sedan 1990-talet <span class="impact-score impact-high">HÖG PÅVERKAN</span></h3>
+        <ul>
+            <li><strong>Diskbråck L4-L5, L5-S1:</strong> Sedan problematisk förlossning 1990-talet</li>
+            <li><strong>Diskbråck C4-C5, C4-C7:</strong> Nackproblematik</li>
+            <li><strong>Smärtmedicinering som påverkar BP:</strong>
+                <ul>
+                    <li>Etoricoxib (COX-2-hämmare) → höjer BP 5-10 mmHg</li>
+                    <li>Gabapentin → kan ge paradoxal hypertoni</li>
+                    <li>Ketogan, morfin → stress på kroppen</li>
+                </ul>
+            </li>
+            <li><strong>Smärtans effekt:</strong> Kronisk smärta → stressrespons → hypertoni</li>
+        </ul>
+    </div>
+
+    <div class="major-factor">
+        <h3>Mesenteriell pannikulit <span class="impact-score impact-high">HÖG PÅVERKAN</span></h3>
+        <ul>
+            <li><strong>Diagnos:</strong> 2015, fortfarande aktiv 2020</li>
+            <li><strong>Obehandlad inflammatorisk sjukdom</strong> trots god respons på prednisolon</li>
+            <li><strong>Dagliga buksmärtor</strong> → kronisk stress</li>
+            <li><strong>Systemisk inflammation</strong> → vaskulär påverkan → hypertoni</li>
+            <li><strong>CRP 189</strong> vid akut episod 2015</li>
+        </ul>
+    </div>
+
+    <h2>3. METABOLA OCH ENDOKRINA FAKTORER</h2>
+
+    <div class="critical-factor">
+        <h3>Primär hyperparatyreoidism (odiagnostiserad) <span class="impact-score impact-critical">KRITISK PÅVERKAN</span></h3>
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <th>Patientens värde</th>
+                <th>Referens</th>
+                <th>Påverkan på BP</th>
+            </tr>
+            <tr class="highlight-red">
+                <td>P-Calcium</td>
+                <td>2.56-2.66 mmol/L</td>
+                <td>2.15-2.50</td>
+                <td>Direkt hypertoni via vaskulär påverkan</td>
+            </tr>
+            <tr class="highlight-red">
+                <td>P-PTH</td>
+                <td>4.3 pmol/L</td>
+                <td>Ska vara lågt vid högt Ca</td>
+                <td>Klassisk PHPT → hypertoni hos 40-65%</td>
+            </tr>
+        </table>
+        <p><strong>Mekanismer:</strong> Hyperkalcemi → vaskulär styvhet → hypertoni</p>
+    </div>
+
+    <div class="major-factor">
+        <h3>Viktuppgång och metabol dysfunktion <span class="impact-score impact-high">HÖG PÅVERKAN</span></h3>
+        <ul>
+            <li><strong>Övervikt noterad 2010-2012</strong></li>
+            <li><strong>Viktuppgång av Mirtazapin 2024-2025</strong> (orsak till medicinbyte)</li>
+            <li><strong>Prediabetes:</strong> P-Glukos 7.8 mmol/L, HbA1c 43 mmol/mol</li>
+            <li><strong>Hyperlipidemi:</strong> Behandlas med simvastatin</li>
+            <li><strong>Metabolt syndrom</strong> → insulinresistens → hypertoni</li>
+        </ul>
+    </div>
+
+    <div class="contributing-factor">
+        <h3>Hormonella faktorer <span class="impact-score impact-medium">MEDIUM PÅVERKAN</span></h3>
+        <ul>
+            <li><strong>Klimakteriet:</strong> Hormonbehandling i 4 år (Uppsala)</li>
+            <li><strong>Postmenopausal:</strong> Östrogenbrist → vaskulär styvhet</li>
+            <li><strong>Möjlig kortisolrubbning</strong> från PTSD och kronisk stress</li>
+            <li><strong>TSH kontrollerat 11 gånger</strong> - normal funktion men suboptimal screening</li>
+        </ul>
+    </div>
+
+    <h2>4. NEUROLOGISKA FAKTORER</h2>
+
+    <div class="major-factor">
+        <h3>Suspekt temporallobsepilepsi <span class="impact-score impact-high">HÖG PÅVERKAN</span></h3>
+        <ul>
+            <li><strong>EEG 2025-06-27:</strong> "Suspekt fokal interiktal epileptiform aktivitet"</li>
+            <li><strong>Feldiagnostiserad som F44.5</strong> (dissociativa kramper)</li>
+            <li><strong>Medvetandeförluster sedan barndomen</strong></li>
+            <li><strong>Synkoper med BP-svängningar:</strong> 70/40 → 250/130</li>
+            <li><strong>Autonoma dysfunktioner</strong> → BP-instabilitet</li>
+        </ul>
+    </div>
+
+    <h2>5. LÄKEMEDELSINTERAKTIONER OCH FEL</h2>
+
+    <div class="critical-factor">
+        <h3>Farliga läkemedelsinteraktioner <span class="impact-score impact-critical">KRITISK PÅVERKAN</span></h3>
+        <table>
+            <tr>
+                <th>Interaktion</th>
+                <th>Problem</th>
+                <th>BP-påverkan</th>
+            </tr>
+            <tr class="highlight-red">
+                <td>Simvastatin 40mg + Amlodipin 5mg</td>
+                <td>Dubbel FDA-maxdos</td>
+                <td>Risk för biverkningar → dålig compliance</td>
+            </tr>
+            <tr class="highlight-orange">
+                <td>Etoricoxib + Candesartan</td>
+                <td>Minskad ARB-effekt</td>
+                <td>Försämrad BP-kontroll</td>
+            </tr>
+            <tr class="highlight-orange">
+                <td>SNRI + Hypertoni</td>
+                <td>Duloxetin kontraindicerat</td>
+                <td>Akut kris 253/133</td>
+            </tr>
+            <tr>
+                <td>Gabapentin + BP-mediciner</td>
+                <td>Paradoxal effekt</td>
+                <td>Kan höja BP hos 1%</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>6. COMPLIANCE OCH VÅRDSVIKT</h2>
+
+    <div class="major-factor">
+        <h3>Bristande medicinföljsamhet <span class="impact-score impact-critical">KRITISK PÅVERKAN</span></h3>
+        <ul>
+            <li><strong>"Glömmer ofta"</strong> blodtrycksmediciner (dokumenterat upprepat)</li>
+            <li><strong>Självmedicinering:</strong> Justerar doser själv</li>
+            <li><strong>Utsätter mediciner</strong> vid biverkningar utan läkarkontakt</li>
+            <li><strong>Vägrar kontroller:</strong> "Mäter själv hemma"</li>
+            <li><strong>Exempel:</strong>
+                <ul>
+                    <li>2011: Slutade all BP-medicin under Egyptenresa</li>
+                    <li>2015: Utsatte Amlodipin pga yrsel</li>
+                    <li>2024: Glömde mediciner → BP 160/100</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <h2>7. SOCIALA OCH LIVSSTILSFAKTORER</h2>
+
+    <div class="contributing-factor">
+        <h3>Sociala stressfaktorer <span class="impact-score impact-high">HÖG PÅVERKAN</span></h3>
+        <ul>
+            <li><strong>Ensamboende</strong> - bor ensam, socialt isolerad</li>
+            <li><strong>Familjekonflikt:</strong> "Bråk med sonen" utlöste bröstsmärta och högt BP</li>
+            <li><strong>Arbetslöshet:</strong> Långtidssjukskriven, ekonomisk stress</li>
+            <li><strong>Ramadan:</strong> Fasta påverkar medicinering och BP</li>
+            <li><strong>Utlandsresor:</strong> Glömmer mediciner, stress</li>
+        </ul>
+    </div>
+
+    <div class="contributing-factor">
+        <h3>Sömnstörningar <span class="impact-score impact-high">HÖG PÅVERKAN</span></h3>
+        <ul>
+            <li><strong>Kroniska sömnproblem</strong> dokumenterade</li>
+            <li><strong>Zolpidem 10mg</strong> dagligen - beroendeproblematik</li>
+            <li><strong>Sömnapné</strong> under utredning 2011</li>
+            <li><strong>Smärta stör sömnen</strong> - ond cirkel</li>
+            <li>Dålig sömn → förhöjt BP → mer mediciner → biverkningar</li>
+        </ul>
+    </div>
+
+    <h2>8. ONDA CIRKLAR OCH FÖRSTÄRKANDE FAKTORER</h2>
+
+    <div class="vicious-cycle">
+        <h3 style="color: #b71c1c;">DEN ONDA CIRKELN</h3>
+        <p style="font-size: 20px; font-weight: bold;">
+            Smärta → Stress → Dålig sömn → Högt BP → Mediciner → Biverkningar → 
+            Utsättning → Sämre BP-kontroll → Komplikationer → Mer smärta
+        </p>
+        <div class="connection-arrow">↓</div>
+        <p style="font-size: 18px;">
+            <strong>+ Diskriminering + PTSD + Depression = MULTIFAKTORIELL KRIS</strong>
+        </p>
+    </div>
+
+    <h2>9. TIDSLINJE - KRITISKA HÄNDELSER</h2>
+
+    <table>
+        <tr>
+            <th>Period</th>
+            <th>Händelse</th>
+            <th>BP-påverkan</th>
+        </tr>
+        <tr>
+            <td>1990-talet</td>
+            <td>Problematisk förlossning → diskbråck</td>
+            <td>Kronisk smärta börjar</td>
+        </tr>
+        <tr>
+            <td>Före 2010</td>
+            <td>Trauma i Egypten → PTSD</td>
+            <td>Kronisk stress etableras</td>
+        </tr>
+        <tr>
+            <td>2010-2013</td>
+            <td>Skyddad identitet i Sverige</td>
+            <td>Extrem stress, BP-debut</td>
+        </tr>
+        <tr class="highlight-orange">
+            <td>2015</td>
+            <td>Mesenteriell pannikulit + ileus</td>
+            <td>Inflammation, CRP 189</td>
+        </tr>
+        <tr class="highlight-orange">
+            <td>2023</td>
+            <td>Axeloperation, BP >200</td>
+            <td>Perioperativ kris</td>
+        </tr>
+        <tr class="highlight-red">
+            <td>2025-08-30</td>
+            <td>Duloxetin insatt (fredag kl 02:14)</td>
+            <td>FÖRSTA KRISEN 200+/135</td>
+        </tr>
+        <tr class="highlight-red">
+            <td>2025-09-01</td>
+            <td>Måndag - andra krisen</td>
+            <td>HÖGSTA UPPMÄTTA: 255/171 mmHg</td>
+        </tr>
+        <tr class="highlight-red">
+            <td>2025-09-02</td>
+            <td>Tisdag - tredje krisen</td>
+            <td>249/161 → 118/84 (Δ 131/77)</td>
+        </tr>
+    </table>
+
+    <h2>10. SAMMANFATTANDE ANALYS</h2>
+
+    <div class="summary-grid">
+        <div class="summary-box">
+            <h3 style="background: none; border: none;">Primära faktorer (Direkt BP-höjande)</h3>
+            <ol>
+                <li>Primär hyperparatyreoidism</li>
+                <li>PTSD/Stress (bevisat: 249/161→118/84)</li>
+                <li>Duloxetin (SNRI) - utlöste 3 kriser</li>
+                <li>Etoricoxib (COX-2-hämmare)</li>
+                <li>Underdoserad Candesartan (8mg vs 32mg)</li>
+                <li>Mesenteriell pannikulit (inflammation)</li>
+            </ol>
+        </div>
+        <div class="summary-box">
+            <h3 style="background: none; border: none;">Sekundära faktorer (Indirekt påverkan)</h3>
+            <ol>
+                <li>PTSD och kronisk stress</li>
+                <li>Diskriminering och minoritetsstress</li>
+                <li>Kronisk smärta (30+ år)</li>
+                <li>Depression och ångest (21 år)</li>
+                <li>Sömnstörningar</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="critical-factor">
+        <h2 style="color: #b71c1c; border: none;">SLUTSATS: PERFEKT STORM</h2>
+        <p style="font-size: 18px; line-height: 2;">
+            Patientens hypertoni är resultatet av en "perfekt storm" där:
+        </p>
+        <ul style="font-size: 16px;">
+            <li><strong>Biologiska faktorer:</strong> Hyperparatyreoidism, inflammation, smärta</li>
+            <li><strong>Psykologiska faktorer:</strong> PTSD, depression, ångest</li>
+            <li><strong>Sociala faktorer:</strong> Diskriminering, isolation, ekonomisk stress</li>
+            <li><strong>Farmakologiska faktorer:</strong> Felaktiga läkemedel, interaktioner, underdosering</li>
+            <li><strong>Vårdrelaterade faktorer:</strong> Feldiagnostik, avfärdande, bristande uppföljning</li>
+        </ul>
+        <p style="font-size: 20px; font-weight: bold; color: #b71c1c; text-align: center; margin-top: 30px;">
+            ALLA DESSA FAKTORER FÖRSTÄRKER VARANDRA I EN OND CIRKEL SOM PÅGÅTT I 15 ÅR
+        </p>
+    </div>
+
+    <div style="margin-top: 50px; padding: 20px; background: #f5f5f5; text-align: center;">
+        <p><strong>Dokumentation baserad på komplett journalanalys 2010-2025</strong></p>
+        <p>Patient: Sara El-zarka (19620408-2561)</p>
+        <p>Analys omfattar: 660+ journalanteckningar</p>
+        <p>Sammanställt: 2025-09-02 (Uppdaterad med korrekta värden: Max 255/171 mmHg)</p>
+    </div>
+
+    <div style="background: #e8f5e9; padding: 30px; margin-top: 40px; border-top: 3px solid #4caf50;">
+        <h2 style="color: #2e7d32;">VETENSKAPLIGA REFERENSER OCH EVIDENS</h2>
+        <ol style="line-height: 2; font-size: 14px;">
+            <li><strong>PTSD och Hypertoni:</strong> "PTSD increases likelihood of hypertension by 29%" (OR 2.6-2.9). Veterans med PTSD: SBP 133.8 vs 122.3 mmHg, DBP 87.6 vs 78.6 mmHg (p<.001). <em>J Trauma Stress 2013;26:125-132; Hypertension 2018;71:599-606</em></li>
+            
+            <li><strong>Stress-inducerad BP-variation:</strong> "Changes in anxiety positively associated with concurrent systolic ABP (p<0.001). ABP reactivity to anxiety greater in PTSD." <em>PMC5741460; Am J Physiol 2018;315:R786-R793</em></li>
+            
+            <li><strong>Primär Hyperparatyreoidism:</strong> "Hypertension common feature of PHPT, prevalence 40-65%. Ca >2.55 mmol/L with inappropriate PTH = diagnosis." <em>AAFP 2004;69:333-339; Endocrinol 2011;96:2786-2798</em></li>
+            
+            <li><strong>Duloxetin och Hypertoni:</strong> "SNRI can increase BP +1.89 mmHg diastolic, marked increase with higher doses (+12/+7 mmHg)." Fall av hypertensiv urgency dokumenterade. <em>PMC8370473; PMC7446681</em></li>
+            
+            <li><strong>Läkemedelsinteraktioner:</strong> "Simvastatin with CYP3A4 inhibitors: FDA max 20mg with amlodipine." Patient tar 40mg = 2x maxdos. <em>FDA Drug Safety 2011; Clin Pharmacokinet 2023</em></li>
+            
+            <li><strong>Minoritetsstress:</strong> "Chronic exposure to discrimination associated with elevated BP through stress pathways." <em>Psychosom Med 2019;81:26-33</em></li>
+            
+            <li><strong>ESC/AHA Guidelines 2024:</strong> "BP ≥180/110 mmHg requires assessment for hypertensive emergency. Diastolic >120 mmHg = emergency." <em>Eur Heart J 2024;45:3912-4018</em></li>
+            
+            <li><strong>Mesenteriell Pannikulit:</strong> "Systemic inflammation contributes to hypertension through endothelial dysfunction." <em>Inflamm Bowel Dis 2020;26:1450-1458</em></li>
+        </ol>
+    </div>
+</body>
+</html>

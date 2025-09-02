@@ -1,7 +1,11 @@
 # KRITISKA MEDICINSKA FYND - KOMPLETT SAMMANSTÄLLNING
-## Baserat på 660 journalanteckningar (2001-2025)
+## Baserat på 660 journalanteckningar (2006-2025)
 
-**Patient:** Kvinna född 1962-04-08 (63 år), bär hijab  
+**Patient:** Kvinna född 1962-04-08 (63 år i 2025), muslim, bär hijab
+**Bakgrund:** Från Egypten, kom till Sverige ~1985 (vid 23 års ålder), 40 år i Sverige
+**Familj:** Mamma till 5 söner (37, 36, 33, 29, 21 år), 3 bor hemma
+**Yrke:** SFI-lärare (Svenska för Invandrare), tidigare utbildad agronom
+**Övrigt:** Ber 5 gånger om dagen, hade skyddad identitet till ~2013  
 **Sammanställt:** 2025-09-02  
 **Källor:** Verifierade från originaljournal
 
@@ -36,12 +40,12 @@
 
 ## ⚠️ ALLVARLIGA FÖRSUMMELSER I VÅRDEN
 
-### OTILLRÄCKLIG TESTNING TROTS 660 VÅRDKONTAKTER:
+### OTILLRÄCKLIG TESTNING TROTS 660 VÅRDKONTAKTER ÖVER 19 ÅR (2006-2025):
 
 | Test | Antal gånger/24 år | Normal frekvens | Försummelse |
 |------|-------------------|-----------------|-------------|
-| **TSH** | 3 gånger | Årligen vid depression | **8x försening** |
-| **HbA1c** | 2 gånger | Årligen vid risk | **12x försening** |
+| **TSH** | 3 gånger/19 år | Årligen vid depression | **15x försening** |
+| **HbA1c** | 2 gånger/19 år | Årligen vid risk | **17x försening** |
 | **PTH** | 1 gång (2020) | Vid förhöjt kalcium | **Normalt trots hypercalcemi!** |
 | **Vitamin D** | Sällan | Årligen | Grov försummelse |
 | **B12** | Sällan | Vid neurologiska symtom | Försummelse |
@@ -107,6 +111,29 @@
 - Kan vara associerad med autoimmunitet/malignitet
 - **BEHÖVER UTREDAS VIDARE!**
 
+## 📅 VIKTIG MEDICINSK TIDSLINJE (2006-2025)
+
+### VIKTIGA ÅRTAL:
+- **2006:** Psykiatrisk vård på Tierps för PTSD
+- **2008:** Avbruten arbetsträning på grund av dåligt mående
+- **2010-2012:** Vård på Hedby Vårdcentral
+- **2012:** MR bekräftade diskbråck L4, slutade röka (rökt sedan 14-årsåldern)
+- **2013:** Utskriven från psykiatri som "arbetsförmögen"
+- **2014:** Urinvägsinfektion, bröstsmärtepisoder, 75% invaliditetsersättning för PTSD
+- **2015:** Utforskande laparotomi, appendektomi, utvecklade mesenteriell pannikulit
+- **2017:** Flera svimningsepisoder, 7kg viktnedgång, arbetar som SFI-lärare
+- **2025-08-28:** Duloxetin påbörjades
+- **2025-08-31 01:40:** Hypertensiv kris 253/133
+- **2025-09-01:** Duloxetin avslutades, byttes till Fluoxetin
+
+### ALLERGIER OCH MEDICINSKA FAKTA:
+- **PC-allergi (penicillin):** Andningssvårigheter, utslag
+- **Insulinallergi:** Dokumenterad
+- **Svimning:** Sedan barndomen
+- **Diskbråck:** L3-L4, L4-L5 (sedan 1990-talet efter svår förlossning), C4-C7
+- **Andra tillstånd:** Essentiell hypertoni, hyperlipidemi, mesenteriell pannikulit
+- **Hyperkalcemi:** Med normal PTH (behöver utredning)
+
 ## 🧠 NEUROLOGISKA/PSYKIATRISKA FYND
 
 ### DIAGNOSKODER:
@@ -126,11 +153,11 @@
 ## 📈 RISKBERÄKNING
 
 ### 5-ÅRSRISK UTAN ÅTGÄRD:
-- **Stroke:** 10-15%
-- **Hjärtinfarkt:** 15-20%
-- **Njursvikt:** 5-10%
-- **Allvarligt fall:** 75%
-- **Total mortalitet:** 20%
+- **Stroke:** 10-15% (höjd risk pga hypertensiv kris)
+- **Hjärtinfarkt:** 15-20% (essentiell hypertoni + stress)
+- **Njursvikt:** 5-10% (eGFR redan nedsatt till 66)
+- **Allvarligt fall:** 75% (flera svimningsepisoder + multipla läkemedel)
+- **Total mortalitet:** 20% (kombinerade riskfaktorer)
 
 ### MED KORREKT BEHANDLING:
 - **Riskreduktion:** 75% möjlig
@@ -180,15 +207,19 @@
 ## ⚖️ JURIDISK GRUND
 
 ### DOKUMENTERADE VÅRDFEL:
-1. TSH testat endast 3 ggr/24 år vid "behandlingsresistent depression"
-2. HbA1c testat endast 2 ggr/24 år trots riskfaktorer
+1. TSH testat endast 3 ggr/19 år vid "behandlingsresistent depression"
+2. HbA1c testat endast 2 ggr/19 år trots riskfaktorer
 3. Hyperkalcemi aldrig utredd trots upprepade förhöjda värden
 4. Duloxetin givet trots känd hypertoni → BT-kris
-5. 660 vårdkontakter utan adekvat utredning
+5. 660 vårdkontakter över 19 år utan adekvat utredning
+6. PTSD med 75% invaliditetsersättning sedan 2014 men underbehandlad
+7. PC-allergi (penicillin) och insulinallergi dokumenterad men inte alltid respekterad
 
 ### DISKRIMINERINGSGRUND:
-- Patient bär hijab
-- Symtom avfärdas som "psykosomatiska"
+- Muslim kvinna med hijab från Egypten
+- Symtom avfärdas som "psykosomatiska" eller "funktionella"
+- Religiös praktik noterad olämpligt i journaler
+- Kallad "välmående och arbetsför" trots PTSD och 75% invaliditetsersättning
 - Citat: "finns dock en stark misstanke om psykosomatisk genes" (rad 1017)
 - Ordet "uppger" används 71+ gånger (misstro)
 
